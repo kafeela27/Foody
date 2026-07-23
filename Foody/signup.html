@@ -1,0 +1,61 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Sign Up </title>
+
+    <link rel="stylesheet" href="style.css">
+    <!-- Remix Icon -->
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+    <div id="navbar"></div>
+
+    <div class="signin-container">
+
+        <div class="signin-box">
+
+            <h2>Create Account</h2>
+
+            <input type="text" id="name" placeholder="Full Name">
+            <input type="email" id="email" placeholder="Email">
+            <!-- Password -->
+            <div class="password-box">
+                <input type="password" id="password" placeholder="Password">
+                <i class="ri-eye-line toggle-pass" id="togglePass1"></i>
+            </div>
+
+            <!-- Confirm Password -->
+            <div class="password-box">
+                <input type="password" id="confirmPassword" placeholder="Confirm Password">
+                <i class="ri-eye-line toggle-pass" id="togglePass2"></i>
+            </div>
+
+            <!-- Role Selection -->
+            <select id="role" class="role-box">
+                <option value="">Select Role</option>
+                <option value="user">User</option>
+                <option value="admin">Admin</option>
+            </select>
+
+            <button id="signup-btn">Sign Up</button>
+
+            <p>
+                Already have an account?
+                <a href="signin.html" style="color:#ff6b6b;">Login</a>
+            </p>
+
+        </div>
+
+    </div>
+
+    <script type="module" src="script.js"></script>
+    <script type="module" src="authentication.js"></script>
+
+</body>
+
+</html>

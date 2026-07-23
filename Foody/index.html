@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Foody</title>
+
+    <!-- Remix Icon -->
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body data-show-track-order="true">
+
+    <!-- NavBar -->
+    <div id="navbar"></div>
+
+    <!-- Hero -->
+    <section class="hero" id="home">
+
+        <div class="hero-content">
+            <h1>Delicious Food Delivered To Your Doorstep</h1>
+
+            <p>
+                Discover your favorite meals from top restaurants.
+                Fast delivery, fresh ingredients, and unforgettable taste.
+            </p>
+
+            <a href="#menu" class="order-btn">Order Now</a>
+        </div>
+
+    </section>
+
+    <!-- Menu Section -->
+    <section class="menu-section" id="menu">
+
+        <h2 class="section-title">Our Menu</h2>
+
+        <!-- Category Buttons -->
+        <div class="category-filter">
+            <button class="active" data-category="all">All</button>
+            <button data-category="Burger">Burger</button>
+            <button data-category="Submarine">Submarine</button>
+            <button data-category="Pizza">Pizza</button>
+            <button data-category="Rice">Rice</button>
+            <button data-category="Drink">Drink</button>
+        </div>
+
+        <!-- Food List (Firebase will load here) -->
+        <div class="food-container" id="food-container">
+
+            <!-- Example Card (Firebase will replace this dynamically) -->
+            <div class="food-card">
+                <img src="https://images.unsplash.com/photo-1600891964599-f61ba0e24092" />
+                <h3>Chicken Burger</h3>
+                <p>Juicy grilled chicken burger with cheese</p>
+                <div class="food-footer">
+                    <span>Rs. 1200</span>
+                    <button>Add to Cart</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about" id="about">
+
+        <div class="about-container">
+
+            <div class="about-image">
+                <img src="assets/about.jpg" alt="About Food">
+            </div>
+
+            <div class="about-content">
+                <h2>About Mr_Food</h2>
+
+                <p>
+                    At Mr_Food, we believe every meal should be fresh, flavorful, and made with care. Our talented
+                    chefs prepare a wide variety of dishes using quality ingredients to ensure every bite is
+                    satisfying.
+                </p>
+
+                <p>
+                    Whether you're enjoying a quick lunch, a family dinner, or a late-night snack, Mr_Food is here
+                    to serve you with delicious food, friendly service, and fast delivery. Your satisfaction is our
+                    top priority.
+                </p>
+
+                <a href="#menu" class="about-btn">Explore Menu</a>
+            </div>
+
+        </div>
+
+    </section>
+
+    <section class="chefs" id="chefs">
+
+        <h2 class="section-title">Our Chefs</h2>
+        <p class="chef-subtitle">
+            Meet our professional chefs who prepare delicious meals with passion and care.
+        </p>
+
+        <div class="chef-container">
+
+            <!-- Chef 1 -->
+            <div class="chef-card">
+                <img src="assets/chef1.jpg" alt="Chef 1">
+
+                <h3>John Doe</h3>
+                <span>Head Chef</span>
+
+                <p>Expert in burgers and grilled dishes.</p>
+
+                <div class="chef-social">
+                    <a href="#"><i class="ri-facebook-fill"></i></a>
+                    <a href="#"><i class="ri-instagram-line"></i></a>
+                    <a href="#"><i class="ri-twitter-x-line"></i></a>
+                </div>
+            </div>
+
+            <!-- Chef 2 -->
+            <div class="chef-card">
+                <img src="assets/chef2.png" alt="Chef 2">
+
+                <h3>Michael Smith</h3>
+                <span>Assistant Chef</span>
+
+                <p>Specialist in handmade pizzas</p>
+
+                <div class="chef-social">
+                    <a href="#"><i class="ri-facebook-fill"></i></a>
+                    <a href="#"><i class="ri-instagram-line"></i></a>
+                    <a href="#"><i class="ri-twitter-x-line"></i></a>
+                </div>
+            </div>
+
+            <!-- Chef 3 -->
+            <div class="chef-card">
+                <img src="assets/chef3.png" alt="Chef 3">
+
+                <h3>Emily Brown</h3>
+                <span>Assistant Chef</span>
+
+                <p>Creates delicious desserts and sweets.</p>
+
+                <div class="chef-social">
+                    <a href="#"><i class="ri-facebook-fill"></i></a>
+                    <a href="#"><i class="ri-instagram-line"></i></a>
+                    <a href="#"><i class="ri-twitter-x-line"></i></a>
+                </div>
+            </div>
+
+        </div>
+
+    </section>
+
+    <section class="contact" id="contact">
+
+        <h2 class="section-title">Contact Us</h2>
+        <p class="contact-subtitle">
+            Have questions or feedback? Send us a message and we’ll get back to you quickly.
+        </p>
+
+        <div class="contact-container">
+
+            <!-- Contact Info -->
+            <div class="contact-info">
+
+                <div class="info-box">
+                    <div class="info-header">
+                        <i class="ri-map-pin-line"></i>
+                        <h3>Address</h3>
+                    </div>
+                    <p>Mr_Food Restaurant, Main Street, City Center</p>
+                </div>
+
+                <div class="info-box">
+                    <div class="info-header">
+                        <i class="ri-phone-line"></i>
+                        <h3>Phone</h3>
+                    </div>
+                    <p>+94 77 123 4567</p>
+                </div>
+
+                <div class="info-box">
+                    <div class="info-header">
+                        <i class="ri-mail-line"></i>
+                        <h3>Email</h3>
+                    </div>
+                    <p>support@mrfood.com</p>
+                </div>
+
+            </div>
+
+            <!-- Contact Form -->
+            <form class="contact-form">
+
+                <input type="text" placeholder="Your Name" required>
+                <input type="text" placeholder="Subject" required>
+
+                <textarea rows="5" placeholder="Your Message"></textarea>
+
+                <button type="submit">Send Message</button>
+
+            </form>
+
+        </div>
+
+    </section>
+
+
+    <!-- Footer Section -->
+    <footer class="footer">
+
+        <div class="footer-container">
+
+            <!-- Brand -->
+            <div class="footer-box">
+                <h2>Mr_Food</h2>
+                <p>
+                    Delicious food delivered fast and fresh. Your satisfaction is our priority.
+                </p>
+
+                <div class="footer-social">
+                    <a href="#"><i class="ri-facebook-fill"></i></a>
+                    <a href="#"><i class="ri-instagram-line"></i></a>
+                    <a href="#"><i class="ri-twitter-x-line"></i></a>
+                </div>
+            </div>
+
+            <!-- Links -->
+            <div class="footer-box">
+                <h3>Quick Links</h3>
+                <a href="#home">Home</a>
+                <a href="#menu">Menu</a>
+                <a href="#about">About</a>
+                <a href="#contact">Contact</a>
+            </div>
+
+            <!-- Opening Hours -->
+            <div class="footer-box">
+                <h3>Opening Hours</h3>
+                <p>Mon - Fri : 9:00 AM - 10:00 PM</p>
+                <p>Saturday : 10:00 AM - 11:00 PM</p>
+                <p>Sunday : Closed</p>
+            </div>
+
+            <!-- Contact -->
+            <div class="footer-box">
+                <h3>Contact Us</h3>
+                <p><i class="ri-map-pin-line"></i> Main Street, City Center</p>
+                <p><i class="ri-phone-line"></i> +94 77 123 4567</p>
+                <p><i class="ri-mail-line"></i> support@mrfood.com</p>
+            </div>
+
+        </div>
+
+        <div class="footer-bottom">
+            <p>© 2026 Mr_Food. All Rights Reserved.</p>
+        </div>
+
+    </footer>
+
+    <script type="module" src="script.js"></script>
+    <script type="module" src="cartCount.js"></script>
+    <script type="module" src="authentication.js"></script>
+    <script type="module" src="foods.js"></script>
+</body>
+
+</html>

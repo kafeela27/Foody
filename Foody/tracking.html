@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Track Order</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="tracking.css">
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css" rel="stylesheet">
+</head>
+
+<body data-hide-auth-area="true" data-hide-cart-icon="true">
+
+  <div id="navbar"></div>
+
+  <div class="tracking-container">
+
+    <div class="tracking-header">
+      <div class="order-num">ORDER #<span id="orderIdText">-</span></div>
+      <h2 id="statusHeadline">Loading your order...</h2>
+      <div class="address"><i class="ri-map-pin-line"></i><span id="orderAddress">-</span></div>
+    </div>
+
+    <div class="timeline-card" id="timelineCard">
+      <!-- steps injected by JS -->
+    </div>
+
+  </div>
+
+  <script type="module">
+    fetch("navbar.html")
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById("navbar").innerHTML = data;
+        window.dispatchEvent(new Event("navbarLoaded"));
+      });
+  </script>
+
+  <script type="module" src="authentication.js"></script>
+  <script type="module" src="tracking.js"></script>
+</body>
+
+</html>
